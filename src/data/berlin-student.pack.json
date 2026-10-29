@@ -1,0 +1,654 @@
+{
+  "id": "berlin-non-eu-student",
+  "name": "Berlin: non-EU student arrival",
+  "version": "0.1.0",
+  "jurisdiction": "Berlin, Germany",
+  "audience": "Non-EU/EEA students who entered Germany on a national study visa and live in Berlin",
+  "verifiedOn": "2026-10-23",
+  "staleAfterDays": 60,
+  "inputs": [
+    {
+      "id": "entryType",
+      "label": "How did you enter Germany?",
+      "type": "enum",
+      "options": ["national_visa", "visa_free", "unsure"],
+      "satisfiedWhen": "present",
+      "help": "This pack covers students who entered on a national study visa."
+    },
+    {
+      "id": "arrivalDate",
+      "label": "Arrival date in Germany",
+      "type": "date",
+      "satisfiedWhen": "reached",
+      "help": "The day you entered Germany. It does not start the Anmeldung clock."
+    },
+    {
+      "id": "moveInDate",
+      "label": "Move-in date",
+      "type": "date",
+      "satisfiedWhen": "reached",
+      "help": "The day you moved into your Berlin home. It starts the two-week Anmeldung clock. Leave empty if you have not moved in yet."
+    },
+    {
+      "id": "visaEndDate",
+      "label": "Visa end date",
+      "type": "date",
+      "satisfiedWhen": "present",
+      "help": "The last day your entry visa is valid."
+    },
+    {
+      "id": "hasAdmissionLetter",
+      "label": "I have an admission or conditional admission letter",
+      "type": "boolean",
+      "satisfiedWhen": "true"
+    }
+  ],
+  "supportedWhen": [
+    {
+      "input": "entryType",
+      "oneOf": ["national_visa"],
+      "unsupportedMessage": "This pack covers non-EU students who entered on a national study visa. Visa-free entry follows different rules and is not covered yet."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Bundesmeldegesetz §17 (Anmeldung, Abmeldung)",
+      "publisher": "Federal law portal (gesetze-im-internet.de)",
+      "authorityType": "statute",
+      "url": "https://www.gesetze-im-internet.de/bmg/__17.html",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Statute text; the consolidated-version date was not shown in the retrieved content.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S2",
+      "title": "Bundesmeldegesetz §19 (Mitwirkung des Wohnungsgebers)",
+      "publisher": "Federal law portal (gesetze-im-internet.de)",
+      "authorityType": "statute",
+      "url": "https://www.gesetze-im-internet.de/bmg/__19.html",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Statute text; the consolidated-version date was not shown in the retrieved content.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S3",
+      "title": "Service Berlin: Wohnsitz anmelden",
+      "publisher": "Land Berlin (service.berlin.de)",
+      "authorityType": "government_service",
+      "url": "https://service.berlin.de/dienstleistung/120686/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No last-updated date shown on the page.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S4",
+      "title": "Service Berlin: Aufenthaltserlaubnis zum Studium (residence permit for full-time studies)",
+      "publisher": "Land Berlin (service.berlin.de)",
+      "authorityType": "government_service",
+      "url": "https://service.berlin.de/dienstleistung/305244/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No last-updated date shown. The English version mentions payment-system notices from March and July 2026, so it was edited in 2026.",
+      "reliability": "primary",
+      "note": "The German original was used for exact wording; the English version for the document list and fees."
+    },
+    {
+      "id": "S5",
+      "title": "Service Berlin: Fiktionsbescheinigung",
+      "publisher": "Land Berlin (service.berlin.de)",
+      "authorityType": "government_service",
+      "url": "https://service.berlin.de/dienstleistung/326233/standort/327437/en/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No last-updated date shown on the page.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S6",
+      "title": "Berlin immigration office (LEA): making appointments",
+      "publisher": "Land Berlin (berlin.de/einwanderung)",
+      "authorityType": "government_service",
+      "url": "https://www.berlin.de/einwanderung/en/services/appointments/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Page metadata shows 2026-10-23, which equals the retrieval date, so it is not treated as an update date.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S7",
+      "title": "Make it in Germany: planning your arrival and course of study",
+      "publisher": "Federal Government portal (make-it-in-germany.com)",
+      "authorityType": "federal_portal",
+      "url": "https://www.make-it-in-germany.com/en/study-training/study/planning/arrival",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Page metadata shows 2026-10-23, which equals the retrieval date, so it is not treated as an update date.",
+      "reliability": "secondary",
+      "note": "A federal information portal that summarises requirements; not the deciding authority."
+    },
+    {
+      "id": "S8",
+      "title": "TU Berlin: residence permit",
+      "publisher": "Technische Universität Berlin",
+      "authorityType": "university",
+      "url": "https://www.tu.berlin/en/international/getting-started-at-tu-berlin/right-of-residence/residence-permit",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No date shown on the page.",
+      "reliability": "secondary"
+    },
+    {
+      "id": "S9",
+      "title": "FU Berlin: health insurance for enrollment",
+      "publisher": "Freie Universität Berlin",
+      "authorityType": "university",
+      "url": "https://www.fu-berlin.de/en/studium/bewerbung/immatrikulation/unterlagen/krankenversicherung.html",
+      "retrievedOn": "2026-10-23",
+      "pageDate": "2016-03-11",
+      "pageDateNote": "Page metadata date; the information may be outdated.",
+      "reliability": "secondary"
+    },
+    {
+      "id": "S10",
+      "title": "Service Berlin: Steueridentifikationsnummer, Vergabe",
+      "publisher": "Land Berlin (service.berlin.de)",
+      "authorityType": "government_service",
+      "url": "https://service.berlin.de/dienstleistung/329123/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No last-updated date shown on the page.",
+      "reliability": "primary"
+    },
+    {
+      "id": "S11",
+      "title": "Rundfunkbeitrag: what to consider when moving",
+      "publisher": "ARD ZDF Deutschlandradio Beitragsservice (rundfunkbeitrag.de)",
+      "authorityType": "government_service",
+      "url": "https://www.rundfunkbeitrag.de/presse-und-aktuelles/servicethemen/worauf-muessen-sie-bei-einem-umzug-achten",
+      "retrievedOn": "2026-10-23",
+      "pageDate": "2026-07-13",
+      "pageDateNote": "Date shown on the page.",
+      "reliability": "primary",
+      "note": "Operated by the public broadcasters' contribution service, not a ministry."
+    },
+    {
+      "id": "S12",
+      "title": "Aufenthaltsgesetz §16b (Studium)",
+      "publisher": "Federal law portal (gesetze-im-internet.de)",
+      "authorityType": "statute",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Statute text; the consolidated-version date was not shown in the retrieved content.",
+      "reliability": "primary",
+      "note": "This section does not mention livelihood or health insurance; those come from other provisions that were not retrieved."
+    },
+    {
+      "id": "S13",
+      "title": "Foreign Office leaflet D3f: proof of financing for studies",
+      "publisher": "Auswärtiges Amt (embassy Tbilisi copy)",
+      "authorityType": "government_service",
+      "url": "https://tiflis.diplo.de/ge-de/service/visum/2722272-2722272",
+      "retrievedOn": "2026-10-23",
+      "pageDate": "2025-08-18",
+      "pageDateNote": "Leaflet dated 18.08.2025.",
+      "reliability": "primary",
+      "note": "A visa-stage leaflet. The amounts follow national rules, but check your own embassy's current version."
+    },
+    {
+      "id": "S14",
+      "title": "HfM Berlin: visa and residence permit",
+      "publisher": "Hochschule für Musik Hanns Eisler Berlin",
+      "authorityType": "university",
+      "url": "https://www.hfm-berlin.de/studium/studienstart/immatrikulation/visum-aufenthaltserlaubnis/",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "No date shown on the page; it mentions a validity to 4 March 2026 for another group, so parts may be stale.",
+      "reliability": "secondary"
+    },
+    {
+      "id": "S15",
+      "title": "FU Berlin: residence permit",
+      "publisher": "Freie Universität Berlin",
+      "authorityType": "university",
+      "url": "https://www.fu-berlin.de/studium/international/studium_fu/einreise_aufenthalt/aufenthaltserlaubnis/index.html",
+      "retrievedOn": "2026-10-23",
+      "pageDate": null,
+      "pageDateNote": "Page metadata shows 2011, which likely reflects creation, not the last update.",
+      "reliability": "secondary"
+    },
+    {
+      "id": "S16",
+      "title": "Rundfunkbeitragsstaatsvertrag (consolidated text in force since 25 May 2018)",
+      "publisher": "Copy hosted by media-perspektiven.de",
+      "authorityType": "statute_mirror",
+      "url": "https://www.media-perspektiven.de/fileadmin/user_upload/media-perspektiven/Dokumentation/Rundfunkbeitragsstaatsvertrag_in_Kraft_seit_25.5.2018.pdf",
+      "retrievedOn": "2026-10-23",
+      "pageDate": "2018-05-25",
+      "pageDateNote": "Consolidated version in force since this date; the current text may differ.",
+      "reliability": "secondary",
+      "note": "A third-party copy of the treaty, not the official publication."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C-EARLIEST",
+      "topic": "Earliest date you may apply for the residence permit",
+      "statements": [
+        {
+          "text": "Service Berlin: you can apply at the earliest 4 months before your current residence title expires.",
+          "sourceIds": ["S4"]
+        },
+        {
+          "text": "The LEA appointments page, HfM Berlin and FU Berlin state 8 weeks before expiry (FU: of the visa or of the 90 days).",
+          "sourceIds": ["S6", "S14", "S15"]
+        }
+      ],
+      "display": "Official and university sources give different earliest dates. Ankunft does not pick one. Check with LEA or your international office before applying early."
+    },
+    {
+      "id": "C-FOREIGN-INSURANCE",
+      "topic": "Whether foreign health insurance is enough",
+      "statements": [
+        {
+          "text": "Service Berlin: a foreign health insurance policy is generally not sufficient for the residence permit.",
+          "sourceIds": ["S4"]
+        },
+        {
+          "text": "FU Berlin describes two routes for students with home-country private insurance: switch to German student insurance, or get an exemption from a German statutory insurer and keep the home cover. The page does not state outright that foreign private insurance qualifies for the exemption.",
+          "sourceIds": ["S9"]
+        }
+      ],
+      "display": "These statements may concern different things (the residence permit versus enrollment). Ankunft does not resolve this. Ask your university and LEA what they accept."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "housing",
+      "title": "Secure housing in Berlin",
+      "summary": "A lease or sublease for your main residence in Berlin. For the residence permit a second residence in Berlin does not count.",
+      "mode": "tracked",
+      "completedWhenInput": "moveInDate",
+      "appliesWhen": "Everyone in the supported profile.",
+      "requirements": [],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No official deadline found. Note that the Anmeldung clock starts at move-in, not at arrival.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Make it in Germany suggests student halls of residence and says your International Office can help with the search.",
+          "sourceIds": ["S7"]
+        }
+      ],
+      "conflictIds": [],
+      "openQuestions": []
+    },
+    {
+      "id": "landlord_confirmation",
+      "title": "Get the landlord's move-in confirmation (Wohnungsgeberbestätigung)",
+      "summary": "Your landlord, or someone they authorise, confirms your move-in in writing or electronically to the registration office. The confirmation states the move-in date, so it can only be issued once you have moved in. A lease does not replace it.",
+      "mode": "tracked",
+      "appliesWhen": "Tenants and sub-tenants who move into a dwelling.",
+      "requirements": [
+        {
+          "id": "lc-1",
+          "label": "You have housing and you have moved in",
+          "expr": { "allOf": [{ "task": "housing" }, { "input": "moveInDate" }] },
+          "basis": "legal_requirement",
+          "sourceIds": ["S2"],
+          "note": "§19 BMG: the landlord confirms the move-in (Einzug), and the confirmation contains the move-in date."
+        }
+      ],
+      "deadline": {
+        "kind": "informational",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "The landlord must confirm within the registration period set in §17(1) BMG (two weeks from move-in). If it is refused or does not arrive in time, you must promptly tell the registration office (§19 BMG).",
+        "sourceIds": ["S2", "S1"]
+      },
+      "meanwhileNotes": [],
+      "conflictIds": [],
+      "openQuestions": [
+        "Shared-flat and sublet cases (who counts as the landlord) are not verified."
+      ]
+    },
+    {
+      "id": "anmeldung",
+      "title": "Register your address (Anmeldung)",
+      "summary": "Register your Berlin address with the registration office. In person you need an appointment; online registration needs an ID card or eID with the online function and a PIN. You receive a registration confirmation (Meldebestätigung). There is no fee.",
+      "mode": "tracked",
+      "appliesWhen": "Everyone who moves into a dwelling in Berlin.",
+      "requirements": [
+        {
+          "id": "an-1",
+          "label": "Housing and the landlord's move-in confirmation",
+          "expr": {
+            "allOf": [{ "task": "housing" }, { "task": "landlord_confirmation" }]
+          },
+          "basis": "authority_requirement",
+          "sourceIds": ["S3", "S2"],
+          "note": "Service Berlin lists the landlord's move-in confirmation as a required document and says a lease does not replace it."
+        }
+      ],
+      "deadline": {
+        "kind": "statutory",
+        "triggerInput": "moveInDate",
+        "offsetDays": 14,
+        "direction": "within",
+        "text": "Register within two weeks of moving in (§17 BMG). The last day is computed as move-in date + 14 days; confirm the counting with the registration office. The clock starts at move-in, not at arrival.",
+        "sourceIds": ["S1", "S3"]
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Online registration needs a valid ID card or eID with the online function activated, plus your PIN. Otherwise book an in-person appointment.",
+          "sourceIds": ["S3"]
+        }
+      ],
+      "conflictIds": [],
+      "openQuestions": [
+        "Whether you can book an Anmeldung appointment before the landlord's confirmation exists is not stated in the sources we checked.",
+        "Whether registering before you move in is allowed is not stated; §17 BMG sets a deadline after move-in."
+      ]
+    },
+    {
+      "id": "health_insurance",
+      "title": "Arrange German health insurance",
+      "summary": "For the residence permit you must be insured in Germany, with statutory insurance or comparable private insurance. Service Berlin says foreign health insurance is generally not sufficient. Universities ask for proof of cover when you enrol.",
+      "mode": "tracked",
+      "appliesWhen": "Everyone in the supported profile.",
+      "requirements": [],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No official deadline found. You need proof for enrollment and for the residence permit application.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Proof for the permit: for statutory insurance, a copy of both sides of the electronic health card or an insurer's confirmation of coverage; for private insurance, an insurer's certificate under §257(2a) SGB V.",
+          "sourceIds": ["S4"]
+        },
+        {
+          "text": "FU Berlin asks for an insurer's certificate rather than a card copy for enrollment. The page's metadata date is 2016, so it may be outdated.",
+          "sourceIds": ["S9"]
+        }
+      ],
+      "conflictIds": ["C-FOREIGN-INSURANCE"],
+      "openQuestions": [
+        "Which proof your own university accepts for enrollment; TU Berlin's pages could not be read."
+      ]
+    },
+    {
+      "id": "enrollment",
+      "title": "Enrol at your university",
+      "summary": "Enrol in person at your university; the deadline is in your admission letter. Until you are enrolled you cannot use facilities such as the library.",
+      "mode": "tracked",
+      "appliesWhen": "Admitted students.",
+      "requirements": [
+        {
+          "id": "en-1",
+          "label": "Proof of health insurance",
+          "expr": { "task": "health_insurance" },
+          "basis": "stated_sequence",
+          "sourceIds": ["S7"],
+          "note": "Make it in Germany says you must show proof of cover to enrol. FU Berlin asks for an insurer's certificate (S9); other universities may differ."
+        }
+      ],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "The enrollment deadline is in your admission letter. Ankunft cannot verify it for you.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Check your admission letter for the enrollment deadline and the documents your university asks for.",
+          "sourceIds": ["S7"]
+        }
+      ],
+      "conflictIds": ["C-FOREIGN-INSURANCE"],
+      "openQuestions": []
+    },
+    {
+      "id": "livelihood",
+      "title": "Prove you can finance your studies",
+      "summary": "For a first residence permit Service Berlin lists: a blocked account, a third-party commitment, a scholarship, a notarised parental declaration with proof of income, or a part-time employment contract. The required funds equal the maximum BAföG rate: 992 EUR a month, 11,904 EUR a year for 2026.",
+      "mode": "tracked",
+      "appliesWhen": "Everyone in the supported profile.",
+      "requirements": [],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No official deadline found. You need the proof for the residence permit application.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Visa-stage leaflet: the full yearly amount goes into a blocked account, you can withdraw at most 992 EUR a month, and the account can usually be opened from abroad through a German bank.",
+          "sourceIds": ["S13"]
+        },
+        {
+          "text": "Visa-stage leaflet: a declaration of commitment (Verpflichtungserklärung) must not be older than six months from issue.",
+          "sourceIds": ["S13"]
+        }
+      ],
+      "conflictIds": [],
+      "openQuestions": [
+        "Whether the proof you used for your visa counts again for the first residence permit is not stated in the sources we checked.",
+        "Amounts change; confirm the current BAföG maximum rate before relying on the figures."
+      ]
+    },
+    {
+      "id": "lea_application",
+      "title": "Submit your residence-permit application to LEA (online)",
+      "summary": "Apply online to the Landesamt für Einwanderung (LEA) and pay the fee by card or PayPal before submitting. Service Berlin lists passport pages plus entry-visa pages for first-time applicants, proof of German health insurance, proof of Berlin residence, proof of livelihood, and a certificate of enrolment or admission.",
+      "mode": "tracked",
+      "appliesWhen": "Non-EU students who need a residence permit for study.",
+      "requirements": [
+        {
+          "id": "la-study-place",
+          "label": "A study place: enrolment certificate or admission",
+          "expr": { "anyOf": [{ "task": "enrollment" }, { "input": "hasAdmissionLetter" }] },
+          "basis": "legal_requirement",
+          "sourceIds": ["S12", "S4"],
+          "note": "§16b AufenthG requires admission by the institution. Service Berlin accepts a certificate of enrolment or admission, so enrollment itself is not required first."
+        },
+        {
+          "id": "la-insurance",
+          "label": "Proof of German health insurance",
+          "expr": { "task": "health_insurance" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S4"]
+        },
+        {
+          "id": "la-livelihood",
+          "label": "Proof of livelihood",
+          "expr": { "task": "livelihood" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S4"]
+        },
+        {
+          "id": "la-residence",
+          "label": "Proof of main residence in Berlin: registration confirmation, or lease plus landlord's confirmation",
+          "expr": { "anyOf": [{ "task": "anmeldung" }, { "task": "landlord_confirmation" }] },
+          "basis": "authority_requirement",
+          "sourceIds": ["S4"],
+          "note": "You do not have to finish Anmeldung first: Service Berlin accepts the lease together with the landlord's move-in confirmation."
+        }
+      ],
+      "deadline": {
+        "kind": "university_stated",
+        "triggerInput": "visaEndDate",
+        "offsetDays": null,
+        "direction": "before_or_on",
+        "text": "Apply while your visa is still valid (university guidance). Ankunft could not verify a statutory latest date for national-visa holders.",
+        "sourceIds": ["S14", "S15"]
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Prepare colour copies of your passport data page and entry-visa pages, a current email address (LEA contacts you by email) and a credit card or PayPal for the fee.",
+          "sourceIds": ["S4"]
+        }
+      ],
+      "conflictIds": ["C-EARLIEST"],
+      "openQuestions": [
+        "Make it in Germany and TU Berlin say to apply within three months of entering; Service Berlin's application page does not state this. Ankunft shows your visa end date instead and does not compute a three-month deadline.",
+        "Whether a national visa counts as lawful stay during processing under §81 AufenthG was not verified."
+      ]
+    },
+    {
+      "id": "lea_appointment",
+      "title": "Attend your LEA appointment and collect the permit",
+      "summary": "After LEA reviews your online application it may ask for more documents, then assigns an appointment where you bring original documents. A sticker can be issued on site; an electronic residence permit takes 4 to 6 weeks to collect. Walk-ins are not accepted.",
+      "mode": "tracked",
+      "appliesWhen": "After you submit the online application.",
+      "requirements": [
+        {
+          "id": "lp-1",
+          "label": "Online application submitted",
+          "expr": { "task": "lea_application" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S4", "S6"]
+        }
+      ],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No deadline found for the appointment itself. The LEA page says waits of several months are possible in some departments.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [
+        {
+          "text": "Bring everything listed in the appointment confirmation email, unstapled and unclipped, plus the printed confirmation.",
+          "sourceIds": ["S6"]
+        }
+      ],
+      "conflictIds": [],
+      "openQuestions": []
+    },
+    {
+      "id": "rundfunkbeitrag",
+      "title": "Register your dwelling for the broadcasting contribution (Rundfunkbeitrag)",
+      "summary": "One person per dwelling registers. The contribution starts on the first day of the month you first hold the dwelling. If you do not register, the Beitragsservice may write to you and can register the dwelling retroactively to your move-in date.",
+      "mode": "tracked",
+      "appliesWhen": "The first holder of a dwelling.",
+      "requirements": [
+        {
+          "id": "rb-1",
+          "label": "You hold a dwelling (you have moved in)",
+          "expr": { "input": "moveInDate" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S11"]
+        }
+      ],
+      "deadline": {
+        "kind": "informational",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "You must notify without undue delay (\"unverzüglich\"). There is no fixed number of days.",
+        "sourceIds": ["S16", "S11"]
+      },
+      "meanwhileNotes": [],
+      "conflictIds": [],
+      "openQuestions": [
+        "Shared-flat handling and exemptions are not verified.",
+        "The treaty text used is a 2018 consolidated third-party copy; check the current official text."
+      ]
+    },
+    {
+      "id": "fiktionsbescheinigung",
+      "title": "Fiktionsbescheinigung (only if LEA cannot decide yet)",
+      "summary": "LEA may issue this certificate when it cannot yet decide on your application and your stay is still lawful when you apply. It requires a submitted application, a main residence in Berlin and a personal interview; the fee is 13 EUR for adults. It is not available to holders of Schengen short-stay (type C) visas.",
+      "mode": "info_only",
+      "appliesWhen": "Only if LEA cannot decide yet and your stay is lawful when you apply.",
+      "requirements": [
+        {
+          "id": "fb-1",
+          "label": "Application submitted",
+          "expr": { "task": "lea_application" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S5"]
+        }
+      ],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No deadline found.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [],
+      "conflictIds": [],
+      "openQuestions": [
+        "Service Berlin says the online application confirmation PDF certifies that your current title stays valid beyond its expiry. How this relates to a Fiktionsbescheinigung for first-time applicants is not verified.",
+        "The legal text of §81 AufenthG was not retrieved."
+      ]
+    },
+    {
+      "id": "tax_id",
+      "title": "Tax ID letter arrives by post",
+      "summary": "After your first registration the registration office forwards your data to the federal tax office, which mails your tax identification number to your registered address. There is no application and no fee.",
+      "mode": "info_only",
+      "appliesWhen": "Everyone who registers an address. Whether students need the number is not verified.",
+      "requirements": [
+        {
+          "id": "tx-1",
+          "label": "Address registered",
+          "expr": { "task": "anmeldung" },
+          "basis": "authority_requirement",
+          "sourceIds": ["S10"]
+        }
+      ],
+      "deadline": {
+        "kind": "informational",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No fixed processing time is stated. If the letter has not arrived 3 months after your first registration, you can contact the federal tax office (BZSt).",
+        "sourceIds": ["S10"]
+      },
+      "meanwhileNotes": [],
+      "conflictIds": [],
+      "openQuestions": []
+    },
+    {
+      "id": "bank_account",
+      "title": "Open a German bank account",
+      "summary": "Make it in Germany advises opening one as soon as possible for rent and other payments. Ankunft found no legal requirement and no verified prerequisites.",
+      "mode": "info_only",
+      "appliesWhen": "Optional.",
+      "requirements": [],
+      "deadline": {
+        "kind": "none_found",
+        "triggerInput": null,
+        "offsetDays": null,
+        "direction": null,
+        "text": "No deadline found.",
+        "sourceIds": []
+      },
+      "meanwhileNotes": [],
+      "conflictIds": [],
+      "openQuestions": []
+    }
+  ]
+}

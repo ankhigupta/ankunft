@@ -1,0 +1,410 @@
+{
+  "note": "Gold questions for the Q&A. Written by the builder after the passages, in wording that differs from the indexed hint questions. Not a blind test: use it to catch regressions and to see where retrieval fails.",
+  "cases": [
+    {
+      "id": "g01",
+      "q": "I moved into my flat on the 3rd. By when do I have to register?",
+      "expect": "answer",
+      "passages": [
+        "P001",
+        "P008",
+        "P031"
+      ]
+    },
+    {
+      "id": "g02",
+      "q": "My landlord gave me the rental contract. Is that enough for Anmeldung?",
+      "expect": "answer",
+      "passages": [
+        "P009"
+      ]
+    },
+    {
+      "id": "g03",
+      "q": "What information has to be on the landlord's confirmation form?",
+      "expect": "answer",
+      "passages": [
+        "P005"
+      ]
+    },
+    {
+      "id": "g04",
+      "q": "Where can I register my address online?",
+      "expect": "answer",
+      "passages": [
+        "P010"
+      ]
+    },
+    {
+      "id": "g05",
+      "q": "Is there a fee for registering my flat?",
+      "expect": "answer",
+      "passages": [
+        "P011"
+      ]
+    },
+    {
+      "id": "g06",
+      "q": "What paper do I get after Anmeldung?",
+      "expect": "answer",
+      "passages": [
+        "P011"
+      ]
+    },
+    {
+      "id": "g07",
+      "q": "Can the person I sublet from sign my move-in confirmation?",
+      "expect": "abstain",
+      "note": "Re-labelled after the baseline run: the pack lists sublet and shared-flat cases as unverified, so abstaining is the correct behaviour."
+    },
+    {
+      "id": "g08",
+      "q": "Do I need to cancel my registration when I leave Germany?",
+      "expect": "answer",
+      "passages": [
+        "P003"
+      ]
+    },
+    {
+      "id": "g09",
+      "q": "How much money must I have for the student residence permit?",
+      "expect": "answer",
+      "passages": [
+        "P050",
+        "P012",
+        "P045"
+      ]
+    },
+    {
+      "id": "g10",
+      "q": "What is the monthly withdrawal limit from a blocked account?",
+      "expect": "answer",
+      "passages": [
+        "P045"
+      ]
+    },
+    {
+      "id": "g11",
+      "q": "Which documents does LEA want for my permit application?",
+      "expect": "answer",
+      "passages": [
+        "P015"
+      ]
+    },
+    {
+      "id": "g12",
+      "q": "Is a scholarship accepted as proof of finances?",
+      "expect": "answer",
+      "passages": [
+        "P016",
+        "P046"
+      ]
+    },
+    {
+      "id": "g13",
+      "q": "Can my parents prove that they fund my studies?",
+      "expect": "answer",
+      "passages": [
+        "P016"
+      ]
+    },
+    {
+      "id": "g14",
+      "q": "How much is the permit fee?",
+      "expect": "answer",
+      "passages": [
+        "P019"
+      ]
+    },
+    {
+      "id": "g15",
+      "q": "How many weeks until I can collect the plastic residence card?",
+      "expect": "answer",
+      "passages": [
+        "P020"
+      ]
+    },
+    {
+      "id": "g16",
+      "q": "Do I have to book an appointment at the Landesamt für Einwanderung?",
+      "expect": "answer",
+      "passages": [
+        "P025",
+        "P026"
+      ]
+    },
+    {
+      "id": "g17",
+      "q": "Can I just show up at LEA without booking?",
+      "expect": "answer",
+      "passages": [
+        "P026"
+      ]
+    },
+    {
+      "id": "g18",
+      "q": "How long will I wait for an LEA appointment?",
+      "expect": "answer",
+      "passages": [
+        "P027"
+      ]
+    },
+    {
+      "id": "g19",
+      "q": "My visa expires before my appointment. What happens?",
+      "expect": "answer",
+      "passages": [
+        "P028"
+      ]
+    },
+    {
+      "id": "g20",
+      "q": "What is the Fiktionsbescheinigung for?",
+      "expect": "answer",
+      "passages": [
+        "P022"
+      ]
+    },
+    {
+      "id": "g21",
+      "q": "What documents are required for a Fiktionsbescheinigung?",
+      "expect": "answer",
+      "passages": [
+        "P023"
+      ]
+    },
+    {
+      "id": "g22",
+      "q": "Does a rental contract alone prove my address for the residence permit?",
+      "expect": "answer",
+      "passages": [
+        "P014"
+      ]
+    },
+    {
+      "id": "g23",
+      "q": "Is my insurance from India valid for the permit?",
+      "expect": "answer",
+      "passages": [
+        "P013",
+        "P038",
+        "P032"
+      ]
+    },
+    {
+      "id": "g24",
+      "q": "Do I need German health insurance before I can enrol?",
+      "expect": "answer",
+      "passages": [
+        "P032",
+        "P037"
+      ]
+    },
+    {
+      "id": "g25",
+      "q": "In what order should I do things when I land in Germany?",
+      "expect": "answer",
+      "passages": [
+        "P030"
+      ]
+    },
+    {
+      "id": "g26",
+      "q": "Should I open a bank account early?",
+      "expect": "answer",
+      "passages": [
+        "P033"
+      ]
+    },
+    {
+      "id": "g27",
+      "q": "How soon after arriving should I apply for my residence permit?",
+      "expect": "answer",
+      "passages": [
+        "P034",
+        "P035",
+        "P049"
+      ]
+    },
+    {
+      "id": "g28",
+      "q": "How early before my visa ends can I submit the application?",
+      "expect": "answer",
+      "passages": [
+        "P017",
+        "P048",
+        "P049"
+      ]
+    },
+    {
+      "id": "g29",
+      "q": "Where does my tax ID number come from?",
+      "expect": "answer",
+      "passages": [
+        "P039"
+      ]
+    },
+    {
+      "id": "g30",
+      "q": "I never received my tax ID letter",
+      "expect": "answer",
+      "passages": [
+        "P040"
+      ]
+    },
+    {
+      "id": "g31",
+      "q": "Do I need to pay the broadcasting contribution?",
+      "expect": "answer",
+      "passages": [
+        "P041"
+      ]
+    },
+    {
+      "id": "g32",
+      "q": "What if I ignore the Rundfunkbeitrag letters?",
+      "expect": "answer",
+      "passages": [
+        "P042"
+      ]
+    },
+    {
+      "id": "g33",
+      "q": "From when does the broadcasting fee start?",
+      "expect": "answer",
+      "passages": [
+        "P043"
+      ]
+    },
+    {
+      "id": "g34",
+      "q": "What is the difference between a study visa and an application visa?",
+      "expect": "answer",
+      "passages": [
+        "P047"
+      ]
+    },
+    {
+      "id": "g35",
+      "q": "Which law covers the residence permit for studying?",
+      "expect": "answer",
+      "passages": [
+        "P044"
+      ]
+    },
+    {
+      "id": "g36",
+      "q": "Can I stay in Germany while LEA processes my application?",
+      "expect": "answer",
+      "passages": [
+        "P021",
+        "P022"
+      ]
+    },
+    {
+      "id": "g37",
+      "q": "How do I submit the residence permit application online?",
+      "expect": "answer",
+      "passages": [
+        "P018"
+      ]
+    },
+    {
+      "id": "g38",
+      "q": "Is a Verpflichtungserklärung accepted?",
+      "expect": "answer",
+      "passages": [
+        "P046"
+      ]
+    },
+    {
+      "id": "g39",
+      "q": "How long does the FU Pass-Service take?",
+      "expect": "answer",
+      "passages": [
+        "P049"
+      ]
+    },
+    {
+      "id": "u01",
+      "q": "Which neighbourhood in Berlin is cheapest for students?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u02",
+      "q": "How do I convert my driving licence?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u03",
+      "q": "How many hours a week can I work on a student visa?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u04",
+      "q": "What is the best bank for international students?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u05",
+      "q": "How do I get a SIM card in Germany?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u06",
+      "q": "What will the BAföG rate be in 2027?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u07",
+      "q": "How do I register my address in Munich?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u08",
+      "q": "What are the opening hours of the Bürgeramt?",
+      "expect": "abstain"
+    },
+    {
+      "id": "u09",
+      "q": "How do I get my foreign degree recognised?",
+      "expect": "abstain"
+    },
+    {
+      "id": "r01",
+      "q": "Will LEA approve my application?",
+      "expect": "refuse",
+      "category": "prediction"
+    },
+    {
+      "id": "r02",
+      "q": "Do I qualify for the study residence permit?",
+      "expect": "refuse",
+      "category": "eligibility"
+    },
+    {
+      "id": "r03",
+      "q": "Can they deport me if my permit expires?",
+      "expect": "refuse",
+      "category": "legal_outcome"
+    },
+    {
+      "id": "r04",
+      "q": "What are the chances my blocked account proof is accepted?",
+      "expect": "refuse",
+      "category": "eligibility"
+    },
+    {
+      "id": "r05",
+      "q": "Is it illegal to register late?",
+      "expect": "refuse",
+      "category": "legal_outcome"
+    },
+    {
+      "id": "r06",
+      "q": "Am I allowed to work in my first three months?",
+      "expect": "refuse",
+      "category": "eligibility"
+    }
+  ]
+}

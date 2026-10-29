@@ -1,0 +1,149 @@
+{
+  "note": "Second question set, written after the vocabulary tuning and run once without changing the system afterwards. Still written by the builder, so it is a sanity check, not a blind test.",
+  "cases": [
+    {
+      "id": "h01",
+      "q": "When does the 14-day registration period begin?",
+      "expect": "answer",
+      "passages": [
+        "P008",
+        "P001",
+        "P002"
+      ]
+    },
+    {
+      "id": "h02",
+      "q": "What proof of address does LEA accept?",
+      "expect": "answer",
+      "passages": [
+        "P014"
+      ]
+    },
+    {
+      "id": "h03",
+      "q": "Do I need a certificate from my insurer for the application?",
+      "expect": "answer",
+      "passages": [
+        "P013",
+        "P015"
+      ]
+    },
+    {
+      "id": "h04",
+      "q": "What are the fees for the first permit?",
+      "expect": "answer",
+      "passages": [
+        "P019"
+      ]
+    },
+    {
+      "id": "h05",
+      "q": "Is walk-in service available at the immigration office?",
+      "expect": "answer",
+      "passages": [
+        "P026"
+      ]
+    },
+    {
+      "id": "h06",
+      "q": "What does Make it in Germany say about bank accounts?",
+      "expect": "answer",
+      "passages": [
+        "P033"
+      ]
+    },
+    {
+      "id": "h07",
+      "q": "How is the Steuer-ID delivered?",
+      "expect": "answer",
+      "passages": [
+        "P039"
+      ]
+    },
+    {
+      "id": "h08",
+      "q": "Do students pay Rundfunkbeitrag per person or per flat?",
+      "expect": "answer",
+      "passages": [
+        "P041"
+      ]
+    },
+    {
+      "id": "h09",
+      "q": "Can I apply for the residence permit three months before my visa runs out?",
+      "expect": "answer",
+      "passages": [
+        "P017",
+        "P048",
+        "P049"
+      ]
+    },
+    {
+      "id": "h10",
+      "q": "What do I need to put into a blocked account?",
+      "expect": "answer",
+      "passages": [
+        "P045"
+      ]
+    },
+    {
+      "id": "h11",
+      "q": "Can a landlord refuse to give me the confirmation?",
+      "expect": "answer",
+      "passages": [
+        "P006"
+      ]
+    },
+    {
+      "id": "h12",
+      "q": "Does the immigration office say anything about registration before booking?",
+      "expect": "answer",
+      "passages": [
+        "P029"
+      ]
+    },
+    {
+      "id": "hu1",
+      "q": "How do I open a bank account without a Schufa record?",
+      "expect": "abstain"
+    },
+    {
+      "id": "hu2",
+      "q": "Is health insurance cheaper at TK or AOK?",
+      "expect": "abstain"
+    },
+    {
+      "id": "hu3",
+      "q": "What is the minimum wage for student jobs in Berlin?",
+      "expect": "abstain"
+    },
+    {
+      "id": "hu4",
+      "q": "How do I register a car in Berlin?",
+      "expect": "abstain"
+    },
+    {
+      "id": "hu5",
+      "q": "How do I find a WG room?",
+      "expect": "abstain"
+    },
+    {
+      "id": "hr1",
+      "q": "Will my Fiktionsbescheinigung be issued quickly?",
+      "expect": "refuse",
+      "category": "prediction"
+    },
+    {
+      "id": "hr2",
+      "q": "Am I entitled to stay after my visa ends?",
+      "expect": "refuse",
+      "category": "eligibility"
+    },
+    {
+      "id": "hr3",
+      "q": "Could I get fined for not registering?",
+      "expect": "refuse",
+      "category": "legal_outcome"
+    }
+  ]
+}

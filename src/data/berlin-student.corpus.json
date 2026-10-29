@@ -1,0 +1,564 @@
+{
+  "packId": "berlin-non-eu-student",
+  "note": "Passages are PARAPHRASES of what each source page said when retrieved on 2026-10-23, taken from a summarising fetch tool. They are not verbatim quotes. To upgrade a passage, replace its text with the exact wording copied from the source page and set textKind to \"verbatim\". Every passage must point at a source in the pack. The \"questions\" on each passage are search hints only. They are indexed so that people's wording finds the right passage, and they are never shown as answers.",
+  "passages": [
+    {
+      "id": "P001",
+      "sourceId": "S1",
+      "locator": "§17 Abs. 1 BMG",
+      "questions": [
+        "How many days do I have to register my address?",
+        "What is the Anmeldung deadline by law?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Anyone moving into a dwelling must register with the local registration office (Meldebehörde) within two weeks of moving in (the statute says: innerhalb von zwei Wochen nach dem Einzug). This is the Anmeldung deadline."
+    },
+    {
+      "id": "P002",
+      "sourceId": "S1",
+      "locator": "§17 BMG",
+      "questions": [
+        "Can I register before I move in?",
+        "Can I do Anmeldung before I have moved in?"
+      ],
+      "textKind": "paraphrase",
+      "text": "In the statute text we retrieved, the deadline runs from the move-in. The text does not say whether registering before you move in is allowed or forbidden. It only limits early deregistration: you can deregister at the earliest one week before moving out."
+    },
+    {
+      "id": "P003",
+      "sourceId": "S1",
+      "locator": "§17 Abs. 2 BMG",
+      "questions": [
+        "Do I have to deregister when I move out?",
+        "What is Abmeldung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Someone who moves out without moving into another dwelling in Germany must deregister (Abmeldung) within two weeks after moving out."
+    },
+    {
+      "id": "P004",
+      "sourceId": "S2",
+      "locator": "§19 BMG",
+      "questions": [
+        "Does the landlord have to confirm my move-in?",
+        "Who gives the Wohnungsgeberbestätigung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The landlord (Wohnungsgeber) is obliged to cooperate in your registration. The landlord, or a person they authorise, must confirm your move-in (Wohnungsgeberbestätigung) in writing to you or electronically to the registration office, within the period set in §17(1), which is two weeks."
+    },
+    {
+      "id": "P005",
+      "sourceId": "S2",
+      "locator": "§19 BMG",
+      "questions": [
+        "What must the landlord's confirmation contain?",
+        "What does the Wohnungsgeberbestätigung include?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The landlord's move-in confirmation must contain: the landlord's name and address (and the owner's name if different), the move-in date, the address of the apartment, and the names of the people who must register."
+    },
+    {
+      "id": "P006",
+      "sourceId": "S2",
+      "locator": "§19 BMG",
+      "questions": [
+        "What if my landlord refuses to give me the confirmation?",
+        "What if the landlord's confirmation is late?"
+      ],
+      "textKind": "paraphrase",
+      "text": "If the landlord refuses to issue the confirmation or it does not arrive in time, the tenant must promptly notify the registration office. The landlord may ask the registration office whether the tenant has registered."
+    },
+    {
+      "id": "P007",
+      "sourceId": "S2",
+      "locator": "§19 BMG",
+      "questions": [
+        "Can anyone else issue the move-in confirmation?",
+        "Can I register at an address where I do not live?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Only the landlord or someone they authorise may issue the move-in confirmation. It is forbidden to offer or provide an address for registration to a third party when that person does not actually live there or intend to."
+    },
+    {
+      "id": "P008",
+      "sourceId": "S3",
+      "locator": "Frist (deadline)",
+      "questions": [
+        "How many days do I have to register after moving in?",
+        "Does the registration deadline start at arrival or at move-in?",
+        "What is the deadline for Anmeldung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin: you must register your residence within 14 days after moving in (innerhalb von 14 Tagen nach Ihrem Einzug). The deadline counts from your move-in, not from your arrival in Germany."
+    },
+    {
+      "id": "P009",
+      "sourceId": "S3",
+      "locator": "Unterlagen (documents)",
+      "questions": [
+        "What documents do I need for Anmeldung?",
+        "Does a lease replace the landlord's confirmation?"
+      ],
+      "textKind": "paraphrase",
+      "text": "For Anmeldung you need proof of identity and the landlord's move-in confirmation (Wohnungsgeberbestätigung). A lease does not replace the landlord's confirmation. On site you need a valid passport or ID card, plus other documents depending on your nationality. A first registration in Berlin may also need birth or marriage certificates, and a supplementary form if you keep another apartment in Germany."
+    },
+    {
+      "id": "P010",
+      "sourceId": "S3",
+      "locator": "Online registration",
+      "questions": [
+        "Can I register online?",
+        "Do I need an appointment for Anmeldung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Online registration needs a valid ID card or eID with the online ID function activated, plus your PIN, and it does not require an appointment. If you register in person at a Bürgeramt you must book an appointment."
+    },
+    {
+      "id": "P011",
+      "sourceId": "S3",
+      "locator": "Gebühren und Ergebnis (fee and result)",
+      "questions": [
+        "Does Anmeldung cost anything?",
+        "Is Anmeldung free?",
+        "What do I get after registering?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Anmeldung has no fee. You receive a registration confirmation (Meldebestätigung) listing your personal details and your addresses, marked as main or secondary residence. Online you download it as a digital certificate; on site you receive it immediately."
+    },
+    {
+      "id": "P012",
+      "sourceId": "S4",
+      "locator": "Voraussetzungen (requirements)",
+      "questions": [
+        "What are the requirements for the study residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin lists these requirements for the residence permit for full-time studies: enrolment or conditional admission; sufficient funds equal to the maximum BAföG rate (992 EUR a month, 11,904 EUR a year for 2026); German statutory health insurance or comparable private cover; a main residence in Berlin; and a current email address, because the immigration office contacts applicants by email."
+    },
+    {
+      "id": "P013",
+      "sourceId": "S4",
+      "locator": "Krankenversicherung (health insurance)",
+      "questions": [
+        "Is foreign health insurance accepted for the residence permit?",
+        "Which health insurance do I need for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin says you must be insured in Germany, with statutory insurance or a comparable private insurer, and that a foreign health insurance policy is generally not sufficient (Eine ausländische Krankenversicherung genügt grundsätzlich nicht). Proof is a copy of both sides of the electronic health card or an insurer's confirmation of coverage; for private insurance, an insurer's certificate under §257(2a) SGB V.",
+      "conflictIds": [
+        "C-FOREIGN-INSURANCE"
+      ]
+    },
+    {
+      "id": "P014",
+      "sourceId": "S4",
+      "locator": "Wohnsitz (residence)",
+      "questions": [
+        "What counts as proof of residence for the permit?",
+        "Do I need Anmeldung before I apply for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "A second residence in Berlin does not qualify for the study residence permit; you need your main residence in Berlin. Proof is either a registration confirmation (Meldebestätigung), or a rental contract together with the landlord's move-in confirmation. So you do not have to finish Anmeldung before applying if you have the lease and the landlord's confirmation."
+    },
+    {
+      "id": "P015",
+      "sourceId": "S4",
+      "locator": "Unterlagen (documents)",
+      "questions": [
+        "What documents do I need for the residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Documents listed for the study residence permit: the online application confirmation PDF; colour copies of your passport data page, plus entry stamp or visa pages if you entered Germany and apply for the first time; a copy of any existing German residence title; proof of German health insurance; proof of Berlin residence; proof of livelihood; and a certificate of enrolment or admission. If an authorised representative files for you, a power of attorney."
+    },
+    {
+      "id": "P016",
+      "sourceId": "S4",
+      "locator": "Lebensunterhalt (livelihood)",
+      "questions": [
+        "How can I prove I can finance my studies?",
+        "What counts as proof of funds?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Proof of livelihood for a first residence permit can be: a blocked account, a third-party commitment (Verpflichtungserklärung), a scholarship, a notarised parental declaration with proof of parental income, or a part-time employment contract. For an extension, bank statements from the last six months and proof of other income."
+    },
+    {
+      "id": "P017",
+      "sourceId": "S4",
+      "locator": "Antragstellung (timing)",
+      "questions": [
+        "How early can I apply for the residence permit?",
+        "When can I apply for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin: you can apply online at the earliest 4 months before your current residence title expires (frühestens 4 Monate vor Ablauf Ihres aktuellen Aufenthaltstitels).",
+      "conflictIds": [
+        "C-EARLIEST"
+      ]
+    },
+    {
+      "id": "P018",
+      "sourceId": "S4",
+      "locator": "How to apply",
+      "questions": [
+        "How do I apply for the residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "To apply, complete the online application for a residence permit for language and study purposes and pay the fee by credit card or PayPal before submitting. The immigration office reviews the application and may ask for more documents. If it is approved you receive an in-person appointment and must bring original documents."
+    },
+    {
+      "id": "P019",
+      "sourceId": "S4",
+      "locator": "Gebühren (fees)",
+      "questions": [
+        "How much does the residence permit cost?",
+        "What are the fees for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Fees for the study residence permit: sticker label 56 EUR (first issue) or 49 EUR (renewal); electronic residence permit (eAT) 100 EUR (first issue) or 93 EUR (renewal). A digital passport photo at the on-site terminal costs 6 EUR extra. Refunds are generally not possible once processing has begun."
+    },
+    {
+      "id": "P020",
+      "sourceId": "S4",
+      "locator": "Bearbeitung (processing)",
+      "questions": [
+        "How long does the permit take to arrive?",
+        "How long does the electronic residence permit take?"
+      ],
+      "textKind": "paraphrase",
+      "text": "A sticker can be issued on site at the appointment. An electronic residence permit (eAT) takes 4 to 6 weeks to collect. The study permit is generally granted and extended for two years. The service is available only at the Landesamt für Einwanderung (LEA), Keplerstraße 2, 10589 Berlin."
+    },
+    {
+      "id": "P021",
+      "sourceId": "S4",
+      "locator": "Hinweis (note)",
+      "questions": [
+        "Is my stay lawful while LEA decides on my application?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin says that if you arrived in Germany fewer than 91 days ago and apply for the first time, your stay is considered lawful until a decision is made, for nationals of the states listed under §41 AufenthV. In that case you may start studies but may not work."
+    },
+    {
+      "id": "P022",
+      "sourceId": "S5",
+      "locator": "Fiktionsbescheinigung",
+      "questions": [
+        "What is a Fiktionsbescheinigung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "A Fiktionsbescheinigung is issued when a decision on a residence permit application cannot yet be made, for example because documents are missing or the file is not available. It may only be issued if your stay is still lawful when you apply."
+    },
+    {
+      "id": "P023",
+      "sourceId": "S5",
+      "locator": "Voraussetzungen (requirements)",
+      "questions": [
+        "Who can get a Fiktionsbescheinigung?",
+        "What documents do I need for a Fiktionsbescheinigung?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Requirements for a Fiktionsbescheinigung: lawful residence when you apply, an application for a residence permit already submitted, a main residence in Berlin, and a personal interview. Holders of Schengen short-stay visas (category C) are not eligible. Documents: a valid passport, your previous residence permit if you have one, and proof of main residence (registration confirmation, or lease plus the landlord's written confirmation). The fee is 13 EUR for adults."
+    },
+    {
+      "id": "P024",
+      "sourceId": "S5",
+      "locator": "Types",
+      "questions": [
+        "What types of Fiktionsbescheinigung exist?"
+      ],
+      "textKind": "paraphrase",
+      "text": "There are two types of Fiktionsbescheinigung: for holders of a temporary permit or national (category D) visa, under §81(4) AufenthG, where the existing permit and its conditions stay in force and travel and re-entry are possible; and for visa-free residents entitled by nationality, under §81(3) AufenthG, which allows residence but not re-entry after travelling."
+    },
+    {
+      "id": "P025",
+      "sourceId": "S6",
+      "locator": "Appointments",
+      "questions": [
+        "How do I book an appointment at LEA?",
+        "Is the old appointment system still working?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The old online appointment system (OTV) of the Berlin immigration office is permanently shut down. For many services, appointments are now assigned directly by the responsible department after you submit documents through an online application. If no online application exists for your service, request an appointment through the department's contact form."
+    },
+    {
+      "id": "P026",
+      "sourceId": "S6",
+      "locator": "Appointments",
+      "questions": [
+        "Can I walk in to the immigration office without an appointment?",
+        "What do I bring to my LEA appointment?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The Berlin immigration office does not accept walk-ins; service is generally by appointment only. After you request an appointment, the department emails a confirmation listing the required documents and fees. Bring everything listed together with the printed confirmation, and do not clip, staple or stick the documents together."
+    },
+    {
+      "id": "P027",
+      "sourceId": "S6",
+      "locator": "Timing and waiting",
+      "questions": [
+        "How long are the waits for an LEA appointment?",
+        "How early should I request an appointment?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The immigration office page says residence titles can generally be extended no earlier than 8 weeks before they expire, that the appointment is best scheduled 4 to 6 weeks before expiry, and that waits of several months are possible in some departments, so you should request an appointment well in advance.",
+      "conflictIds": [
+        "C-EARLIEST"
+      ]
+    },
+    {
+      "id": "P028",
+      "sourceId": "S6",
+      "locator": "Validity while waiting",
+      "questions": [
+        "What happens if my permit expires before my appointment?"
+      ],
+      "textKind": "paraphrase",
+      "text": "You must book before your current title becomes invalid. If you attend the booked appointment, your previous title is treated as still valid until then. In an emergency the office may issue a Fiktionsbescheinigung or offer an earlier appointment, but emergencies must be proven (for example, urgent travel within four weeks with a ticket)."
+    },
+    {
+      "id": "P029",
+      "sourceId": "S6",
+      "locator": "Anmeldung",
+      "questions": [
+        "Do I need Anmeldung to get an LEA appointment?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The immigration office appointments page does not say whether Anmeldung is required to get an appointment. It only notes that some services can be booked at a Bürgeramt (citizens' office)."
+    },
+    {
+      "id": "P030",
+      "sourceId": "S7",
+      "locator": "Steps after arrival",
+      "questions": [
+        "In what order should I do the steps after arrival?",
+        "What are the steps after arriving in Germany?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Make it in Germany lists these steps for non-EU students in this order, without setting a strict order: find accommodation; register your address within two weeks of moving in; get health insurance; open a bank account; enrol at the university; apply for a residence permit."
+    },
+    {
+      "id": "P031",
+      "sourceId": "S7",
+      "locator": "Registration",
+      "questions": [
+        "When do I need to register my address?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Make it in Germany says to register at the residents' registration office within two weeks of moving into new accommodation, once you have found accommodation."
+    },
+    {
+      "id": "P032",
+      "sourceId": "S7",
+      "locator": "Health insurance",
+      "questions": [
+        "Do I need health insurance to enrol?",
+        "Is my home-country health insurance recognised?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Make it in Germany: health insurance is legally required in Germany and you must show proof of cover to enrol. Check early whether your home-country insurance is recognised; if it is not, you need German insurance, and the right type depends on your age and situation.",
+      "conflictIds": [
+        "C-FOREIGN-INSURANCE"
+      ]
+    },
+    {
+      "id": "P033",
+      "sourceId": "S7",
+      "locator": "Bank account and enrolment",
+      "questions": [
+        "Should I open a German bank account?",
+        "How do I enrol at the university?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Make it in Germany advises opening a German bank account as soon as possible for rent and other payments. You generally have to enrol in person, so check the deadline in your admission letter. You cannot use university facilities such as the library until you are enrolled."
+    },
+    {
+      "id": "P034",
+      "sourceId": "S7",
+      "locator": "Residence permit",
+      "questions": [
+        "How soon after arrival do I need to apply for a residence permit?",
+        "Do I need a residence permit if I did not need a visa?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Make it in Germany says you need a residence permit to stay for study, even if you did not need a visa to enter, and that you must register with the local foreigners authority within three months of entering the country. The page does not explain how this relates to your visa's expiry date or what proof of financing is required."
+    },
+    {
+      "id": "P035",
+      "sourceId": "S8",
+      "locator": "Residence permit",
+      "questions": [
+        "How soon after arrival should I apply for a residence permit?",
+        "What does TU Berlin say about the residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "TU Berlin says to apply for your residence permit within the first 3 months after your arrival, directly through the immigration office (LEA). This applies to non-EU/EEA nationals staying more than 3 months whose visa does not cover the whole stay. Service Berlin's application page does not state this three-month rule."
+    },
+    {
+      "id": "P036",
+      "sourceId": "S8",
+      "locator": "Documents",
+      "questions": [
+        "What documents does TU Berlin list for the residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "TU Berlin lists for the residence permit: a certificate of enrolment or conditional admission, proof of registration and Berlin residence (with rental contract and landlord's move-in confirmation), health insurance, and proof of financing (a blocked account, declaration of commitment, scholarship certificate or notarised parental declaration with proof of income). Extensions need six months of bank statements."
+    },
+    {
+      "id": "P037",
+      "sourceId": "S9",
+      "locator": "Health insurance for enrolment",
+      "questions": [
+        "Do I need a health insurance certificate to enrol?"
+      ],
+      "textKind": "paraphrase",
+      "text": "FU Berlin requires every student to get a health insurance certificate from a German health insurer before enrolling. It must state that you are insured, exempt from the insurance obligation, or not subject to compulsory insurance. A copy of the chip card or a membership certificate is not enough. The certificate stays valid for your whole course of study unless you change insurers."
+    },
+    {
+      "id": "P038",
+      "sourceId": "S9",
+      "locator": "Private health insurance abroad",
+      "questions": [
+        "Can I keep my private home-country health insurance?"
+      ],
+      "textKind": "paraphrase",
+      "text": "FU Berlin says students with private home-country insurance may cancel it and join German student health insurance, or apply for an exemption from the obligation at a German statutory provider and submit that proof to the university. The page does not say outright that a foreign private policy qualifies for the exemption, and its metadata date is 2016, so it may be outdated.",
+      "conflictIds": [
+        "C-FOREIGN-INSURANCE"
+      ]
+    },
+    {
+      "id": "P039",
+      "sourceId": "S10",
+      "locator": "Steuer-ID",
+      "questions": [
+        "How do I get my tax ID?",
+        "Do I need to apply for a Steuer-ID?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The tax identification number (Steuer-ID) is assigned to everyone registered in Germany. When you register for the first time, the registration office forwards your data to the federal tax office (BZSt), which mails the number to your registered address. There is no application, no documents and no fee."
+    },
+    {
+      "id": "P040",
+      "sourceId": "S10",
+      "locator": "Steuer-ID, missing letter",
+      "questions": [
+        "My tax ID letter has not arrived. What do I do?",
+        "How long does the tax ID letter take?"
+      ],
+      "textKind": "paraphrase",
+      "text": "The page gives no fixed processing time for the tax ID letter. If you have not received it within 3 months of first registering in Germany, you can send your details to the BZSt, which contacts the registry office and sends the number."
+    },
+    {
+      "id": "P041",
+      "sourceId": "S11",
+      "locator": "Wohnung anmelden",
+      "questions": [
+        "Do I have to register for the broadcasting fee?",
+        "What is the Rundfunkbeitrag?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Anyone who becomes the first holder of a dwelling must register it for the broadcasting contribution (Rundfunkbeitrag). Only one person per dwelling has to register and pay. The fastest way is the online form, which opens a contribution account and gives you a nine-digit Beitragsnummer. The page states no deadline."
+    },
+    {
+      "id": "P042",
+      "sourceId": "S11",
+      "locator": "If you do not register",
+      "questions": [
+        "What if I do not register for the Rundfunkbeitrag?"
+      ],
+      "textKind": "paraphrase",
+      "text": "If you do not register your dwelling yourself, the Beitragsservice will write to you, and if you do not respond it registers the dwelling automatically, retroactive to the move-in date in your registration data."
+    },
+    {
+      "id": "P043",
+      "sourceId": "S16",
+      "locator": "§7, §8 Rundfunkbeitragsstaatsvertrag (2018 consolidated copy)",
+      "questions": [
+        "When does the Rundfunkbeitrag start?",
+        "What is the deadline to register for the Rundfunkbeitrag?"
+      ],
+      "textKind": "paraphrase",
+      "text": "In the 2018 consolidated treaty text we retrieved, the contribution obligation begins on the first day of the month in which you first hold the dwelling. You must notify the broadcaster without undue delay and in writing (unverzüglich schriftlich). That is not a fixed number of days. The text is a third-party copy and may not be the current version."
+    },
+    {
+      "id": "P044",
+      "sourceId": "S12",
+      "locator": "§16b AufenthG",
+      "questions": [
+        "What does the law say about the study residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "§16b AufenthG: a residence permit for full-time study is issued if the university or comparable institution has admitted you. Language skills must be proven only if they were not checked at admission. The permit is usually issued for two years. If your admission is withdrawn for reasons you are not responsible for, you must be given up to nine months to seek admission elsewhere."
+    },
+    {
+      "id": "P045",
+      "sourceId": "S13",
+      "locator": "Blocked account",
+      "questions": [
+        "How does a blocked account work?",
+        "How much money must be in a blocked account?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Foreign Office leaflet D3f (dated 18.08.2025): for a student visa, living costs must be secured for one year in advance, calculated as the number of months times the BAföG rate of 992 EUR a month, which is about 11,904 EUR for a year. With a blocked account (Sperrkonto) the full amount is paid in and you can withdraw at most 992 EUR a month. It can usually be opened from abroad through a German bank, and only the official opening confirmation is accepted."
+    },
+    {
+      "id": "P046",
+      "sourceId": "S13",
+      "locator": "Other proofs",
+      "questions": [
+        "Is a Verpflichtungserklärung accepted?",
+        "Can a scholarship count as proof of funds?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Foreign Office leaflet D3f: besides a blocked account, a declaration of commitment (Verpflichtungserklärung) is accepted, which must not be older than six months from issue and is normally obtained from the local foreigners' authority in Germany; or a scholarship confirmation from a public institution such as DAAD. The embassy gives no guarantee that the leaflet is complete or current."
+    },
+    {
+      "id": "P047",
+      "sourceId": "S14",
+      "locator": "Visa types",
+      "questions": [
+        "What is the difference between an application visa and a study visa?",
+        "How long is my study visa valid?"
+      ],
+      "textKind": "paraphrase",
+      "text": "HfM Berlin: an application visa (no admission yet) is valid three months and can be extended by up to six months; if you are admitted in that time you can apply for a study residence permit. A study visa (admission received) is normally valid up to 12 months, and during that period you must apply to the Landesamt für Einwanderung (LEA) for a residence permit."
+    },
+    {
+      "id": "P048",
+      "sourceId": "S14",
+      "locator": "Application timing",
+      "questions": [
+        "How early can I apply for the residence permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "HfM Berlin: the online application can be made at the earliest 8 weeks before your current permit expires (frühestens 8 Wochen vor Ablauf), only through the Berlin service portal, and processing can take several months. The page gives no deadline counted from entry or arrival.",
+      "conflictIds": [
+        "C-EARLIEST"
+      ]
+    },
+    {
+      "id": "P049",
+      "sourceId": "S15",
+      "locator": "Timing, fee and processing",
+      "questions": [
+        "How long does the Pass-Service take?",
+        "When should non-EU students apply for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "FU Berlin: non-EU applicants should apply as soon as possible and at the earliest 8 weeks before the expiry of their visa (or of the 90 days for visa-free entry). The page gives no latest date counted from arrival. A personal visit to the immigration office is required, including fingerprints and payment of the fee, which it puts at about 100 EUR. Processing through the university's Pass-Service is stated as 8 to 14 weeks. The page's metadata date is 2011, so parts may be outdated.",
+      "conflictIds": [
+        "C-EARLIEST"
+      ]
+    },
+    {
+      "id": "P050",
+      "sourceId": "S4",
+      "locator": "Voraussetzungen (requirements): funds",
+      "questions": [
+        "How much money do I need to show for the study residence permit?",
+        "What is the BAföG rate for the permit?"
+      ],
+      "textKind": "paraphrase",
+      "text": "Service Berlin: for the study residence permit you must show that your livelihood is secured at the maximum BAföG rate. For 2026 that is 992 EUR a month, or 11,904 EUR for a year."
+    }
+  ]
+}
