@@ -150,8 +150,20 @@ describe("abstains instead of guessing", () => {
     "What is the capital of France?",
     "asdf qwerty",
     "",
+    // Only generic words: no topic to look up, even though passages contain "start" or "first".
+    "where to start",
+    "where do I start",
+    "how do I begin",
+    "getting started",
+    "what should I do first",
+    "what now",
   ])("%j", (q) => {
     expect(ask(q).kind).toBe("abstain");
+  });
+
+  it("still answers when a generic word comes with a topic", () => {
+    expect(ids(ask("From when does the broadcasting fee start?"))).toContain("P043");
+    expect(ids(ask("When does the 14-day registration period begin?"))).toContain("P008");
   });
 
   it("never returns an uncited passage", () => {

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fmtDate } from "@/lib/format";
 import type { QAResponse } from "@/lib/qa/answer";
+import { askQuestion } from "@/lib/qa/client";
 
 const EXAMPLES = [
   "How many days do I have to register my address?",
@@ -14,30 +15,37 @@ const EXAMPLES = [
 export function Ask({ today }: { today: string }) {
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
+  const [asked, setAsked] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [res, setRes] = useState<QAResponse | null>(null);
 
+  const latest = useRef(0);
+  const resultRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // The typed question stays in the input after submitting, so it can be edited and re-asked.
   async function submit(text: string) {
     const question = text.trim();
     if (!question) return;
+    const id = ++latest.current;
     setBusy(true);
+    setAsked(question);
     setError(null);
+    setRes(null);
     try {
-      const r = await fetch("/api/ask", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ question, today }),
-      });
-      const data = await r.json();
-      if (!r.ok) throw new Error(data?.error ?? "The question could not be sent.");
-      setRes(data as QAResponse);
+      const data = await askQuestion(question, today);
+      if (id === latest.current) setRes(data);
     } catch (e) {
-      setRes(null);
-      setError(e instanceof Error ? e.message : "The question could not be sent.");
+      if (id === latest.current) setError(e instanceof Error ? e.message : "The question could not be sent.");
     } finally {
-      setBusy(false);
+      if (id === latest.current) setBusy(false);
     }
   }
+
+  // Results render below the examples; bring them into view so a submit never looks like a no-op.
+  useEffect(() => {
+    if (res || error) resultRef.current?.scrollIntoView({ block: "nearest" });
+  }, [res, error]);
 
   return (
     <section className="ask" aria-labelledby="ask-title">
@@ -60,6 +68,7 @@ export function Ask({ today }: { today: string }) {
         </label>
         <input
           id="ask-q"
+          ref={inputRef}
           type="text"
           value={q}
           maxLength={500}
@@ -77,8 +86,9 @@ export function Ask({ today }: { today: string }) {
               type="button"
               className="linkish"
               onClick={() => {
+                // Fill only: the person reviews or edits the question, then asks.
                 setQ(ex);
-                void submit(ex);
+                inputRef.current?.focus();
               }}
             >
               {ex}
@@ -87,7 +97,8 @@ export function Ask({ today }: { today: string }) {
         ))}
       </ul>
 
-      <div className="ask__result" aria-live="polite">
+      <div className="ask__result" aria-live="polite" ref={resultRef}>
+        {busy && <p className="note">Searching the saved pages for: {asked}</p>}
         {error && <p className="note note--warn">{error}</p>}
         {res?.kind === "answer" && (
           <>

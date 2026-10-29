@@ -65,6 +65,7 @@ const GROUPS: string[][] = [
   ["expire", "expiry", "expiration", "end", "ends", "ending"],
   ["deadline", "frist", "within", "day", "week", "limit", "due", "late"],
   ["earliest", "early", "earlier", "ahead", "advance"],
+  ["start", "begin", "began", "begun", "beginning"],
   ["process", "processing", "take", "arrive", "arrival", "wait", "waiting", "duration", "came", "come", "receive", "received", "land", "landed"],
 ];
 
@@ -94,6 +95,17 @@ const CANON = new Map<string, string>();
 for (const group of GROUPS) {
   const canon = stem(group[0]);
   for (const w of group) CANON.set(stem(w), canon);
+}
+
+/**
+ * Words that carry no topic on their own ("where to start", "what now"). They stay in the
+ * index, since "when does the fee start" needs them, but a question made only of these has
+ * nothing to look up: any passage containing the word would look like a full match.
+ */
+const GENERIC_TERMS = new Set(["start", "first", "now"].map((w) => CANON.get(stem(w)) ?? stem(w)));
+
+export function hasOnlyGenericTerms(queryTerms: string[]): boolean {
+  return queryTerms.every((t) => GENERIC_TERMS.has(t));
 }
 
 export function tokenize(text: string): string[] {

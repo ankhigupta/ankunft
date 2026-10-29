@@ -3,7 +3,7 @@ import { isPackStale } from "../pack/validate";
 import { diffDays } from "../planner/dates";
 import type { Corpus, Passage } from "./corpus";
 import type { Retriever } from "./retriever";
-import { fold } from "./text";
+import { fold, hasOnlyGenericTerms } from "./text";
 
 /**
  * Answers are EXTRACTIVE: we show the saved passages that match, with their
@@ -174,7 +174,7 @@ export function answerQuestion(question: string, ctx: AnswerContext): QAResponse
 
   const result = retriever.search(q, MAX_PASSAGES + 2);
   const top = result.hits[0];
-  if (!top || result.coverage < MIN_COVERAGE) {
+  if (!top || result.coverage < MIN_COVERAGE || hasOnlyGenericTerms(result.queryTerms)) {
     return {
       kind: "abstain",
       question: q,
