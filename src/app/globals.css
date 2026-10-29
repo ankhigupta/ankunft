@@ -244,8 +244,12 @@ main > * + * {
 
 .fields {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px 24px;
+}
+
+.field {
+  min-width: 0;
 }
 
 .field label {
@@ -435,7 +439,7 @@ main > * + * {
 
 .row__btn {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   grid-template-areas:
     "title title"
     "chip due";
@@ -551,6 +555,13 @@ main > * + * {
   max-width: 44rem;
 }
 
+.detail__body,
+.sources,
+.quote__cite,
+.note {
+  overflow-wrap: anywhere;
+}
+
 .detail__state {
   font-weight: 700;
 }
@@ -584,7 +595,7 @@ main > * + * {
 
 .req {
   display: grid;
-  grid-template-columns: 26px 1fr;
+  grid-template-columns: 26px minmax(0, 1fr);
   gap: 8px;
 }
 
@@ -818,6 +829,149 @@ main > * + * {
 @media (min-width: 60rem) {
   .examples ul {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Narrow screens ------------------------------------------------------------- */
+/* Desktop rules above stay as they are; this only tightens and fixes iOS Safari. */
+
+@media (max-width: 39.99rem) {
+  body {
+    font-size: 1rem;
+  }
+
+  .page {
+    padding: 20px var(--gutter) 40px;
+  }
+
+  main > * + * {
+    margin-top: 20px;
+  }
+
+  .masthead {
+    margin-bottom: 20px;
+  }
+
+  .masthead__name {
+    font-size: 2.5rem;
+  }
+
+  .masthead__tag {
+    margin-top: 8px;
+  }
+
+  .examples ul {
+    gap: 8px;
+  }
+
+  .example {
+    padding: 8px 12px;
+  }
+
+  .intake {
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+
+  .fields {
+    gap: 14px;
+  }
+
+  .field__help {
+    font-size: 0.875rem;
+  }
+
+  /*
+    One height and one box for every form control. iOS Safari ignores min-height on a
+    native <select>, gives an empty date input a collapsed value box and an extra ~4px,
+    and lets date inputs push past the column. 16px+ text also stops iOS zooming on focus.
+  */
+  .field input[type="date"],
+  .field select,
+  .ask__form input[type="text"] {
+    display: block;
+    height: 46px;
+    max-width: 100%;
+    min-width: 0;
+    padding: 9px 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .field select {
+    padding-right: 36px;
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%230f2340' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+
+  .field input[type="date"]::-webkit-date-and-time-value {
+    min-height: 1.5em;
+    text-align: left;
+  }
+
+  .field input[type="date"]::-webkit-datetime-edit {
+    padding: 0;
+  }
+
+  /* An empty date shows a placeholder-style value; keep it readable but distinct from a real date. */
+  .field input[type="date"][data-empty] {
+    color: #5a6a82;
+    -webkit-text-fill-color: #5a6a82;
+  }
+
+  .ask__form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plate {
+    padding: 20px 16px 18px;
+  }
+
+  .plate__term,
+  .plate__reason {
+    font-size: 1.0625rem;
+  }
+
+  .plate__actions {
+    margin-top: 14px;
+  }
+
+  .board {
+    padding: 16px 0 4px;
+  }
+
+  .board__sub {
+    margin-top: 16px;
+  }
+
+  .board__rows {
+    margin-top: 8px;
+  }
+
+  .row__btn {
+    min-height: 48px;
+    padding: 10px 14px;
+  }
+
+  .detail {
+    margin: 0 8px 10px;
+  }
+
+  .detail__body {
+    padding: 14px 14px 16px;
+  }
+
+  .detail__body > * + * {
+    margin-top: 12px;
+  }
+
+  .ask {
+    padding-top: 20px;
   }
 }
 

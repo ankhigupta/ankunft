@@ -85,6 +85,7 @@ function Field({
           id={id}
           type="date"
           value={typeof value === "string" ? value : ""}
+          data-empty={typeof value === "string" && value ? undefined : ""}
           onChange={(e) => onSet(e.target.value || undefined)}
           aria-describedby={helpId}
         />
